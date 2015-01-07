@@ -1,0 +1,26 @@
+<?php
+
+class OperationTypeDirection
+{
+
+	public static $operationTypeDirection = array(
+									"None"	=>0, 
+									"In"	=>1, 
+									"Out"	=>2);
+	public $Value;
+
+	public function __construct($Value = null)
+	{
+		$this->Value=$Value;
+	}
+	
+	public function getValue() 			{ return $this->Value;}
+
+	public function setValue($Value) 	{ return ($this->Value=$Value); }
+  
+	public function getAttributes()
+	{
+		$list = array ('Value' => $this->Value);
+		return $list;
+	}
+}
